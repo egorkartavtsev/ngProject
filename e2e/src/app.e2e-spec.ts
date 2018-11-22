@@ -9,6 +9,10 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
+<<<<<<< HEAD
     expect(page.getParagraphText()).toEqual('Welcome to myNewProj!');
+=======
+    expect(page.getParagraphText()).toEqual('Welcome to ngProject!');
+>>>>>>> Create new app
   });
 });

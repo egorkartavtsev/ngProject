@@ -3,7 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
+<<<<<<< HEAD
     "myNewProj": {
+=======
+    "ngProject": {
+>>>>>>> Create new app
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +17,11 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+<<<<<<< HEAD
             "outputPath": "dist/myNewProj",
+=======
+            "outputPath": "dist/ngProject",
+>>>>>>> Create new app
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +58,30 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+<<<<<<< HEAD
             "browserTarget": "myNewProj:build"
           },
           "configurations": {
             "production": {
               "browserTarget": "myNewProj:build:production"
+=======
+            "browserTarget": "ngProject:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ngProject:build:production"
+>>>>>>> Create new app
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
+<<<<<<< HEAD
             "browserTarget": "myNewProj:build"
+=======
+            "browserTarget": "ngProject:build"
+>>>>>>> Create new app
           }
         },
         "test": {
@@ -95,7 +115,11 @@
         }
       }
     },
+<<<<<<< HEAD
     "myNewProj-e2e": {
+=======
+    "ngProject-e2e": {
+>>>>>>> Create new app
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +127,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
+<<<<<<< HEAD
             "devServerTarget": "myNewProj:serve"
           },
           "configurations": {
             "production": {
               "devServerTarget": "myNewProj:serve:production"
+=======
+            "devServerTarget": "ngProject:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "ngProject:serve:production"
+>>>>>>> Create new app
             }
           }
         },
@@ -123,5 +155,9 @@
       }
     }
   },
+<<<<<<< HEAD
   "defaultProject": "myNewProj"
+=======
+  "defaultProject": "ngProject"
+>>>>>>> Create new app
 }
