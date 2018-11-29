@@ -55,3 +55,4 @@ README.md
 .editorconfig
 src/assets/.gitkeep
 src/environments/
+srs/tsconfig.app.json

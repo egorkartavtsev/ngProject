@@ -5,11 +5,7 @@
     "types": []
   },
   "exclude": [
-<<<<<<< HEAD
-    "test.ts",
-=======
     "src/test.ts",
->>>>>>> Create new app
     "**/*.spec.ts"
   ]
 }
