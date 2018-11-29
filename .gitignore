@@ -43,3 +43,4 @@ angular.json
 package-lock.json
 tsconfig.json
 tslint.json
+/e2e/
