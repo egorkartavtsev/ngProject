@@ -8,6 +8,24 @@
         </div>
     </div>
     <div class="row" #testTemp>
+
+        <table class="table table-stripped table-bordered">
+            <thead>
+                <th>Цех</th>
+                <th>Операция</th>
+                <th>ПЗ</th>
+                <th>Время ремонта</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let order of data">
+                    <td>{{order?.area}}</td>
+                    <td>{{order?.operation}}</td>
+                    <td>{{order?.quest}}</td>
+                    <td>с {{order?.dateStart}} по {{order?.dateEnd}}</td>
+                </tr>
+            </tbody>
+        </table>
+
         <div class="col-12 col-sm-6 col-md-4 mb-3" *ngFor="let order of data" >
             <div class="card">
                 <div class="card-header">
@@ -16,7 +34,7 @@
                 <div class="card-body">
                     <p class="card-text">Start Date: {{order?.dateStart}}</p>
                     <hr>
-                    <p class="card-text">Start End: {{order?.dateEnd}}</p>
+                    <p class="card-text">End Date: {{order?.dateEnd}}</p>
                     <hr>
                     <p class="card-text">Area: {{order?.area}}</p>
                 </div>
