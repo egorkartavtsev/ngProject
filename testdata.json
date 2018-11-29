@@ -1,60 +1,81 @@
 {
-    "queryResult": 
-        [{
-            "dateStart":"2018-10-30",
-            "dateEnd":"2018-11-30",
-            "operation":"Починка 1",
-            "quest":"ПЗ-445165465",
-            "area":"Цех 1" 
+    "queryResult":[
+        {
+         "quest":      "ПЗ-654135135",
+         "dateStart":  "2018-11-30",
+         "dateEnd":    "2018-12-15",
+         "area":       "цех1",
+         "operation":  "agr4"
         },
         {
-            "dateStart":"2018-11-3",
-            "dateEnd":"2018-12-3",
-            "operation":"Починка 2",
-            "quest":"ПЗ-098098",
-            "area":"Цех 2" 
+         "quest":      "ПЗ-475245343",
+         "dateStart":  "2018-10-05",
+         "dateEnd":    "2018-12-25",
+         "area":       "цех1",
+         "operation":  "agr3"
         },
         {
-            "dateStart":"2018-11-8",
-            "dateEnd":"2018-12-18",
-            "operation":"Починка 3",
-            "quest":"ПЗ-87213487",
-            "area":"Цех 1" 
+         "quest":      "ПЗ-jk838989",
+         "dateStart":  "2018-08-22",
+         "dateEnd":    "2018-10-15",
+         "area":       "цех1",
+         "operation":  "agr2"
         },
         {
-            "dateStart":"2018-11-10",
-            "dateEnd":"2018-12-11",
-            "operation":"Починка 4",
-            "quest":"ПЗ-321313",
-            "area":"Цех 5" 
+         "quest":      "ПЗ-32ikjh32",
+         "dateStart":  "2018-02-05",
+         "dateEnd":    "2018-05-20",
+         "area":       "цех1",
+         "operation":  "agr5"
         },
         {
-            "dateStart":"2018-11-3",
-            "dateEnd":"2018-12-1",
-            "operation":"Починка 5",
-            "quest":"ПЗ-54556",
-            "area":"Цех 3" 
+         "quest":      "ПЗ-7857552",
+         "dateStart":  "2018-11-22",
+         "dateEnd":    "2018-12-03",
+         "area":       "цех3",
+         "operation":  "agr2"
         },
         {
-            "dateStart":"2018-11-3",
-            "dateEnd":"2018-11-30",
-            "operation":"Починка 1",
-            "quest":"ПЗ-324567",
-            "area":"Цех 2" 
+         "quest":      "ПЗ-445645123",
+         "dateStart":  "2018-12-10",
+         "dateEnd":    "2018-12-15",
+         "area":       "цех3",
+         "operation":  "agr1"
         },
         {
-            "dateStart":"2018-10-30",
-            "dateEnd":"2018-11-30",
-            "operation":"Починка 2",
-            "quest":"ПЗ-888888",
-            "area":"Цех 5" 
+         "quest":      "ПЗ-363678678",
+         "dateStart":  "2018-12-01",
+         "dateEnd":    "2018-12-31",
+         "area":       "цех5",
+         "operation":  "agr5"
         },
         {
-            "dateStart":"2018-10-30",
-            "dateEnd":"2018-11-30",
-            "operation":"Починка 3",
-            "quest":"ПЗ-923847",
-            "area":"Цех 4" 
+         "quest":      "ПЗ-123ase42314",
+         "dateStart":  "2018-10-01",
+         "dateEnd":    "2018-12-31",
+         "area":       "цех2",
+         "operation":  "agr4"
+        },
+        {
+         "quest":      "ПЗ-csfsd35224",
+         "dateStart":  "2018-09-20",
+         "dateEnd":    "2018-12-01",
+         "area":       "цех2",
+         "operation":  "agr3"
+        },
+        {
+         "quest":      "ПЗ-gfde5234",
+         "dateStart":  "2018-01-01",
+         "dateEnd":    "2018-09-10",
+         "area":       "цех4",
+         "operation":  "agr2"
+        },
+        {
+         "quest":      "ПЗ-5234tra",
+         "dateStart":  "2018-02-01",
+         "dateEnd":    "2018-06-31",
+         "area":       "цех4",
+         "operation":  "agr1"
         }
     ]
 }

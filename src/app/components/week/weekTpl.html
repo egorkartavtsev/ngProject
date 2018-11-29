@@ -1,3 +1,29 @@
 <div class="row justify-content-center">
-        <div class="col-auto"><p class="display3">Название формы недельного плана</p></div>
+    <div class="col-auto"><p class="display3">Название формы недельного плана</p></div>
+</div>
+<div class="w-100">
+    <div class="col">
+        <div class="alert alert-success">
+                {{filter.areaFilter}}<br>{{filter.machinesFilter}}<br>{{filter.dateFilter}}
+        </div>
     </div>
+    <div class="row" #testTemp>
+        <div class="col-12 col-sm-6 col-md-4 mb-3" *ngFor="let order of data" >
+            <div class="card" *applyFilter="order">
+                <div class="card-header">
+                    <h5>{{order?.quest}}</h5>
+                </div>
+                <div class="card-body">
+                    <p class="card-text">Start Date: {{order?.dateStart}}</p>
+                    <hr>
+                    <p class="card-text">Start End: {{order?.dateEnd}}</p>
+                    <hr>
+                    <p class="card-text">Area: {{order?.area}}</p>
+                </div>
+                <div class="card-footer">
+                    <p class="card-text">Operation: {{order?.operation}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

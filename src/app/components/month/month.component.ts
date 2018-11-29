@@ -1,21 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { prodOrder } from 'src/app/library/prod-order.lib';
-import { HttpService } from 'src/app/services/http.service';
+import { Component } from '@angular/core';
+import { FilterService }        from '../../services/filter.service';
+import { FilterModel }          from '../../library/filter-model';
   
 @Component({
     selector: 'month-app',
-    templateUrl: './monthTpl.html',
-    providers: [HttpService]
+    templateUrl: './monthTpl.html'
 })
-export class MonthComponent implements OnInit {
-    
-    private orders: prodOrder[]=[];
-    //private http: HttpService;
-    
-    constructor(private http: HttpService){}
-
-    ngOnInit(){
-        this.http.getData('testdata.json').subscribe(data => this.orders=data["queryResult"]);
-        console.log(this.orders);
+export class MonthComponent {
+    private filter: FilterModel;
+    constructor (private filterService: FilterService){
+        console.log('Month start');
+        this.filterService.filter.subscribe(filt => {
+            this.filter = filt;
+        });
+        console.log('Это сабж в лямбде-МЕСЯЦА: '+this.filter.areaFilter+' '+this.filter.machinesFilter+' '+this.filter.dateFilter+' ');
     }
  }
