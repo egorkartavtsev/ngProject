@@ -1,14 +1,8 @@
 <div class="row justify-content-center">
-    <div class="col-auto"><p class="display3">Название формы недельного плана</p></div>
+    <div class="col-auto"><p class="display3">{{title}}</p></div>
 </div>
 <div class="w-100">
-    <div class="col">
-        <div class="alert alert-success">
-                {{filter.areaFilter}}<br>{{filter.machinesFilter}}<br>{{filter.dateFilter}}
-        </div>
-    </div>
-    <div class="row" #testTemp>
-
+    <div class="row"  style="overflow-x: scroll;">
         <table class="table table-stripped table-bordered">
             <thead>
                 <th>Цех</th>

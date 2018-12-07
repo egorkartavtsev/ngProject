@@ -18,7 +18,8 @@ import { HttpService }      from './services/http.service';
 
 // определение маршрутов
 const appRoutes: Routes =[
-    { path: '', component: WeekComponent},
+    { path: '', component: YearComponent},
+    { path: 'week', component: WeekComponent},
     { path: 'year', component: YearComponent},
     { path: 'month', component: MonthComponent},
     { path: '**', redirectTo: '/' }

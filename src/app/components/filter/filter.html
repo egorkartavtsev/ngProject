@@ -27,13 +27,21 @@
                             <option *ngFor="let mech of machines" value="{{mech}}">{{mech}}</option>
                         </select>
                     </div>
-                    <hr>
-                    <h5>Настройки</h5>
                     <div class="input-group mb-3">
                         <div class="input-group-prepend">
-                            <label class="input-group-text">Дата</label>
+                            <label class="input-group-text">Вид ремонта</label>
                         </div>
-                        <input type="date" class="form-control" name="dateFilter" [(ngModel)]="filterTotal.dateFilter" (input)="inp()">
+                        <select class="custom-select">
+                            <option selected value="">Вce...</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text">Планировщик</label>
+                        </div>
+                        <select class="custom-select">
+                            <option selected value="">Вce...</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -42,36 +50,45 @@
         <!-- for medium width devices -->
         <div class="d-none d-sm-block">
             <div class="alert alert-info row">
-                    <div class="col-6">
-                        <h5>Фильры</h5>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text" for="inputGroupSelect01">Цех</label>
-                            </div>
-                            <select class="custom-select" id="inputGroupSelect01" name="areaFilter" [(ngModel)]="filterTotal.areaFilter" (change)="inp()">
-                                <option value="" selected>Все цеха..</option>
-                                <option *ngFor="let area of areas" value="{{area}}">{{area}}</option>
-                            </select>
+                <div class="col-12"><h5>Фильры</h5></div>
+                <div class="col-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01">Цех</label>
                         </div>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text">Агрегаты</label>
-                            </div>
-                            <select class="custom-select" name="machinesFilter" [(ngModel)]="filterTotal.machinesFilter" (change)="inp()">
-                                <option selected value="">Вce...</option>
-                                <option *ngFor="let mech of machines" value="{{mech}}">{{mech}}</option>
-                            </select>
-                        </div>
+                        <select class="custom-select" id="inputGroupSelect01" name="areaFilter" [(ngModel)]="filterTotal.areaFilter" (change)="inp()">
+                            <option value="" selected>Все цеха..</option>
+                            <option *ngFor="let area of areas" value="{{area}}">{{area}}</option>
+                        </select>
                     </div>
-                    <div class="col-6">
-                        <h5>Настройки</h5>
-                        <div class="input-group mb-3">
-                            <div class="input-group-prepend">
-                                <label class="input-group-text">Дата</label>
-                            </div>
-                            <input type="date" class="form-control" name="dateFilter" [(ngModel)]="filterTotal.dateFilter" (input)="inp()">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text">Агрегаты</label>
                         </div>
+                        <select class="custom-select" name="machinesFilter" [(ngModel)]="filterTotal.machinesFilter" (change)="inp()">
+                            <option selected value="">Вce...</option>
+                            <option *ngFor="let mech of machines" value="{{mech}}">{{mech}}</option>
+                        </select>
                     </div>
+                </div>
+                <div class="col-6">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text">Вид ремонта</label>
+                        </div>
+                        <select class="custom-select">
+                            <option selected value="">Вce...</option>
+                        </select>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text">Планировщик</label>
+                        </div>
+                        <select class="custom-select">
+                            <option selected value="">Вce...</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

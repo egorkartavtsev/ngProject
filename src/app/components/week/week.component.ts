@@ -1,8 +1,10 @@
-import { Component, OnInit, ViewContainerRef} from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { FilterService }        from '../../services/filter.service';
 import { FilterModel }          from '../../library/filter-model';
 import { HttpService }          from '../../services/http.service';
 import { ProdOrder }          from '../../library/prod-order.lib';
+import { ActivatedRoute} from '@angular/router';
+import {Subscription} from 'rxjs';
   
 @Component({
     selector: 'week-app',
@@ -13,10 +15,21 @@ export class WeekComponent implements OnInit {
     private filter: FilterModel;
     totalData: ProdOrder[] = [];
     data: ProdOrder[] = [];
-    private test: any;
+    private title:string;
+    private routeSubscription: Subscription;
+    private querySubscription: Subscription;
 
-    constructor (private filterService: FilterService, private http: HttpService, private renderer: ViewContainerRef){
+    constructor (
+        private filterService: FilterService, 
+        private http: HttpService, 
+        private route: ActivatedRoute
+    ){
         console.log('Week start');
+        this.querySubscription = route.queryParams.subscribe(
+            (queryParam: any) => {
+                this.title = queryParam['query'];
+            }
+        );
     }
     
     ngOnInit(){
@@ -53,7 +66,8 @@ export class WeekComponent implements OnInit {
         
         //this.data = this.http.getDataNew();
 
-        this.http.getData().subscribe(data => { 
+        this.http.getData().subscribe(data => {
+            console.log('Week data start'); 
             this.data = this.totalData = data;
         });
 
