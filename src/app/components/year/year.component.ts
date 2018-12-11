@@ -24,7 +24,12 @@ export class YearComponent {
         console.log('Week start');
         this.querySubscription = route.queryParams.subscribe(
             (queryParam: any) => {
-                this.title = queryParam['query'];
+                console.log(queryParam['query']);
+                if(queryParam['query'] !== undefined ){
+                    this.title = queryParam['query'];
+                } else {
+                    this.title = new Date().getFullYear().toString();
+                }
             }
         );
     }

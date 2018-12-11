@@ -30,6 +30,10 @@ export class HttpService{
     }
 
     getDataNew(){
-        return this.http.get('testdata1.json');
+        return this.http.post(
+            'http://localhost/local_app/test.aspx', 
+            '21',
+            {responseType: 'text'}
+        );
     }
 }

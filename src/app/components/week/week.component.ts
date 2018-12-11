@@ -16,6 +16,7 @@ export class WeekComponent implements OnInit {
     totalData: ProdOrder[] = [];
     data: ProdOrder[] = [];
     private title:string;
+    private titleFor:string;
     private routeSubscription: Subscription;
     private querySubscription: Subscription;
 
@@ -28,6 +29,9 @@ export class WeekComponent implements OnInit {
         this.querySubscription = route.queryParams.subscribe(
             (queryParam: any) => {
                 this.title = queryParam['query'];
+                let tmp = new Date(queryParam['query']);
+                tmp.setDate(tmp.getDate() + 6);
+                this.titleFor = tmp.getFullYear()+'-'+tmp.getMonth()+'-'+tmp.getDate();
             }
         );
     }
@@ -70,6 +74,13 @@ export class WeekComponent implements OnInit {
             console.log('Week data start'); 
             this.data = this.totalData = data;
         });
+
+        this.http.getDataNew().subscribe(
+            data => {
+                console.log(data);
+            },
+            error => console.log(error)
+        )
 
     }
 
